@@ -323,14 +323,34 @@ fn:a=>(a!=="false")}
 	.map(d=>set(d,"schema.propertyOrder",get(d,"sort.ui")))
 	.map(d=>set(d,"schema.title",autoLabel(d.id)))
 
+	var secret_string=
+
 	var initialValue={
-		"embed_path":"/embed/looks/1",
-		"session_length":600,
-		"external_user_id":"test-id-123",
-		"first_name":"Testy",
-		"last_name":"McTestFace",
-		"permissions":["access_data","see_looks"]
-	}
+						  "embed_secret": "dd17cd76351dd3b7593fc4c5bbd6939bb13e1a51074983244d1154cfafb68339",
+						  "host": "saleseng.dev.looker.com",
+						  "embed_path": "embed/dashboards/57",
+						  "session_length": 60000,
+						  "external_user_id": "102",
+						  "first_name": "Jane",
+						  "last_name": "Doe",
+						  "permissions": [
+						    "access_data",
+						    "see_looks",
+						    "see_user_dashboards",
+						    "explore",
+						    "download_with_limit",
+						    "download_without_limit",
+						    "see_drill_overlay",
+						    "save_content",
+						    "embed_browse_spaces",
+						    "schedule_look_emails",
+						    "schedule_external_look_emails",
+						    "see_sql"
+						  ],
+						  "models": "thelook_event",
+						  "external_group_id": "sony_group_content",
+						  "force_logout_login": "false"
+					}
 
 	var editorDef= {
 		schema: {
