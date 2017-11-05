@@ -243,6 +243,7 @@
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/secret.js"></script> // is gitignore
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 						<script>
@@ -323,10 +324,10 @@ fn:a=>(a!=="false")}
 	.map(d=>set(d,"schema.propertyOrder",get(d,"sort.ui")))
 	.map(d=>set(d,"schema.title",autoLabel(d.id)))
 
-	var secret_string=
+	// var secret_string = embed.secret.val();
 
 	var initialValue={
-						  "embed_secret": "dd17cd76351dd3b7593fc4c5bbd6939bb13e1a51074983244d1154cfafb68339",
+						  "embed_secret": embed_secret_from_js,
 						  "host": "saleseng.dev.looker.com",
 						  "embed_path": "embed/dashboards/57",
 						  "session_length": 60000,
@@ -351,6 +352,7 @@ fn:a=>(a!=="false")}
 						  "external_group_id": "sony_group_content",
 						  "force_logout_login": "false"
 					}
+	// initialValue[embed_secret] = ;
 
 	var editorDef= {
 		schema: {
